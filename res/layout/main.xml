@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/bttVenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Nova Venda"
+        android:onClick="onClickNovaVenda"
+         />
+
+    <Button
+        android:id="@+id/bttListar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bttVenda"
+        android:layout_below="@+id/bttVenda"
+        android:text="Listar Vendas"
+        android:onClick="onClickListarVenda" />
+
+    <Button
+        android:id="@+id/bttSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bttListar"
+        android:layout_below="@+id/bttListar"
+        android:layout_marginTop="46dp"
+        android:text="Sair" />
+
+    <Button
+        android:id="@+id/bttIniciarReplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bttSair"
+        android:layout_below="@+id/bttListar"
+        android:onClick="onClickIniciarReplicacao"
+        android:text="Iniciar Replicação" />
+
+    <TextView
+        android:id="@+id/txtStatusConexao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bttSair"
+        android:layout_below="@+id/bttSair"
+        android:text="Status conexão: desconectado." />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.newvisionti.vendas"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+		
+        <uses-library android:name="com.google.android.maps" />
+        
+        <activity
+            android:name="br.newvisionti.vendas.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.newvisionti.vendas.NovaVendaActivity"
+            android:label="@string/title_activity_nova_venda" >
+        </activity>
+        <activity
+            android:name="br.newvisionti.vendas.ListarVendasActivity"
+            android:label="@string/title_activity_listar_vendas" >
+        </activity>
+        <activity
+            android:name="br.newvisionti.vendas.MapasActivity"
+            android:label="@string/title_activity_mapa" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.maps.MapActivity" />
+        </activity>
+        <service android:name="br.newvisionti.vendas.ExportarVendasService">
+            <intent-filter>
+                <action android:name="REPLICACAO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+ 		<receiver
+            android:name="br.newvisionti.vendas.ExemploBroadCast">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </receiver>		        
+    </application>
+
+</manifest>

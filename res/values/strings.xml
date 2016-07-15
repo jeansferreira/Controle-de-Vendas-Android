@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vendas</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_nova_venda">Nova Venda</string>
+    <string name="title_activity_listar_vendas">Lista de Vendas</string>
+    <string name="title_activity_mapa">MapaActivity</string>
+
+</resources>
